@@ -1,1 +1,1145 @@
-kahsdlkgfahslkdghaslkgdhsakghjlaksdgsa
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Buschmann &amp; Kollegen Unternehmensberatung – Unternehmen in schwieriger Lage verkaufen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Buschmann &amp; Kollegen Unternehmensberatung: diskreter Ankauf und Verkauf von Unternehmen mit Verbindlichkeiten – insbesondere GmbH und UG.">
+    <style>
+        :root {
+            --magenta: #e6007e;
+            --magenta-soft: #f472b6;
+            --violet:  #4b006e;
+            --violet-soft: #6b21a8;
+            --bg-light: #f6f7fb;
+            --border-soft: #e5e7eb;
+            --text-main: #111827;
+            --text-muted: #6b7280;
+            --radius-pill: 999px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #ffffff;
+            color: var(--text-main);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        main section {
+            padding: 64px 0;
+            scroll-margin-top: 110px;
+        }
+
+        .container {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .container-narrow {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* HEADER */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+        }
+
+        /* Lila Top-Bar */
+
+        .top-bar {
+            background: var(--violet);
+            border-bottom: 1px solid var(--border-soft);
+            font-size: 0.8rem;
+        }
+
+        .top-bar-inner {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 6px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            color: #e5e7eb;
+        }
+
+        .top-bar-text {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .top-bar-whatsapp {
+            padding: 4px 12px;
+            border-radius: var(--radius-pill);
+            border: 1px solid #ffffff;
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 0.78rem;
+            white-space: nowrap;
+            transition: background 0.2s ease, color 0.2s ease,
+                        box-shadow 0.2s ease, transform 0.05s ease;
+        }
+
+        .top-bar-whatsapp:hover {
+            background: #ffffff;
+            color: var(--violet);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.18);
+            transform: translateY(-1px);
+        }
+
+        .nav-bar {
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-soft);
+        }
+
+        .nav-inner {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 10px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 28px;
+        }
+
+        .logo-block {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            white-space: nowrap;
+        }
+
+        .logo-main {
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+
+        .logo-sub {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+            font-size: 0.92rem;
+            white-space: nowrap;
+        }
+
+        .main-nav a {
+            position: relative;
+            font-weight: 500;
+            padding: 4px 0;
+            letter-spacing: 0.02em;
+            transition: color 0.2s ease;
+        }
+
+        .main-nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 2px;
+            width: 0;
+            background: var(--magenta);
+            border-radius: var(--radius-pill);
+            transition: width 0.25s ease;
+        }
+
+        .main-nav a:hover {
+            color: var(--magenta);
+        }
+
+        .main-nav a:hover::after {
+            width: 100%;
+        }
+
+        /* HERO */
+
+        #start.hero {
+            position: relative;
+            width: 100%;
+            color: #ffffff;
+            padding: 120px 0 120px;
+            background-image:
+                linear-gradient(to right, rgba(0,0,0,0.72), rgba(0,0,0,0.45), rgba(0,0,0,0.35)),
+                url("hero.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .eyebrow {
+            font-size: 0.8rem;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            color: var(--magenta);
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+            line-height: 1.18;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .hero-text {
+            max-width: 720px;
+            font-size: 0.98rem;
+            color: #f3f4f6;
+            margin-bottom: 12px;
+        }
+
+        .hero-text-muted {
+            max-width: 720px;
+            font-size: 0.95rem;
+            color: #e5e7eb;
+            margin-bottom: 16px;
+        }
+
+        .hero-list {
+            margin: 4px 0 24px;
+            padding-left: 1.3rem;
+            font-size: 0.95rem;
+            color: #f9fafb;
+        }
+
+        .hero-list li {
+            margin-bottom: 6px;
+        }
+
+        .hero-cta {
+            margin-bottom: 16px;
+        }
+
+        .btn-primary,
+        .btn-ghost,
+        .btn-secondary-bar {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 22px;
+            border-radius: var(--radius-pill);
+            border: 1px solid transparent;
+            font-size: 0.95rem;
+            cursor: pointer;
+            margin-right: 8px;
+            transition: background 0.2s ease, color 0.2s ease,
+                        box-shadow 0.2s ease, transform 0.08s ease;
+        }
+
+        .btn-primary {
+            background: var(--magenta);
+            border-color: var(--magenta);
+            color: #ffffff;
+            font-weight: 500;
+            box-shadow: 0 10px 25px rgba(230, 0, 126, 0.35);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 12px 28px rgba(230, 0, 126, 0.4);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            border-color: rgba(249,168,212,0.7);
+            color: #f9a8d4;
+        }
+
+        .btn-ghost:hover {
+            background: rgba(249,168,212,0.14);
+        }
+
+        .hero-note {
+            font-size: 0.8rem;
+            color: #e5e7eb;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 26px;
+        }
+
+        .hero-badge {
+            font-size: 0.78rem;
+            padding: 6px 12px;
+            border-radius: var(--radius-pill);
+            border: 1px solid rgba(243,244,246,0.4);
+            background: rgba(17,24,39,0.4);
+            backdrop-filter: blur(6px);
+        }
+
+        /* INFO-BAR UNTER HERO */
+
+        .info-bar {
+            background: var(--violet);
+            color: #ffffff;
+            padding: 14px 0;
+            font-size: 0.9rem;
+        }
+
+        .info-bar-inner {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .info-bar-text {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            align-items: center;
+        }
+
+        .info-pill {
+            padding: 4px 10px;
+            border-radius: var(--radius-pill);
+            border: 1px solid rgba(255,255,255,0.35);
+            font-size: 0.78rem;
+        }
+
+        .btn-secondary-bar {
+            background: #ffffff;
+            color: var(--violet-soft);
+            font-weight: 500;
+        }
+
+        .btn-secondary-bar:hover {
+            background: #f9fafb;
+            box-shadow: 0 6px 16px rgba(15,23,42,0.25);
+            transform: translateY(-1px);
+        }
+
+        /* SECTIONS */
+
+        h2.section-title {
+            font-size: 1.7rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--magenta);
+        }
+
+        .section-intro {
+            font-size: 0.96rem;
+            color: var(--text-muted);
+            max-width: 640px;
+        }
+
+        .underline {
+            width: 46px;
+            height: 3px;
+            border-radius: var(--radius-pill);
+            background: var(--magenta);
+            margin: 16px 0 14px;
+        }
+
+        /* LEISTUNGEN */
+
+        #waswir {
+            background: #ffffff;
+            border-bottom: 1px solid var(--border-soft);
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+            gap: 32px;
+            margin-top: 18px;
+            font-size: 0.95rem;
+        }
+
+        .two-col ul {
+            padding-left: 1.3rem;
+        }
+
+        .two-col li {
+            margin-bottom: 6px;
+        }
+
+        .hint-box {
+            margin-top: 20px;
+            font-size: 0.86rem;
+            color: var(--text-muted);
+            padding: 10px 14px;
+            border-left: 3px solid var(--magenta-soft);
+            background: #fdf2ff;
+            border-radius: 10px;
+        }
+
+        /* ABLAUF */
+
+        #ablauf {
+            background: var(--bg-light);
+            border-bottom: 1px solid var(--border-soft);
+        }
+
+        .steps {
+            margin-top: 18px;
+        }
+
+        .step {
+            display: grid;
+            grid-template-columns: auto minmax(0, 1fr);
+            column-gap: 16px;
+            padding: 16px 0;
+            border-top: 1px solid var(--border-soft);
+            font-size: 0.94rem;
+        }
+
+        .step:last-child {
+            border-bottom: 1px solid var(--border-soft);
+        }
+
+        .step-number {
+            width: 28px;
+            height: 28px;
+            border-radius: var(--radius-pill);
+            border: 1px solid var(--magenta);
+            color: var(--magenta);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 3px;
+        }
+
+        .step h3 {
+            margin-bottom: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        /* WARUM WIR */
+
+        #warum {
+            background: #ffffff;
+            border-bottom: 1px solid var(--border-soft);
+        }
+
+        .columns-3 {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+            margin-top: 22px;
+        }
+
+        .columns-3 h3 {
+            margin-bottom: 6px;
+            font-size: 1rem;
+        }
+
+        .columns-3 p {
+            font-size: 0.9rem;
+        }
+
+        /* FAQ */
+
+        #faq {
+            background: #ffffff;
+            border-bottom: 1px solid var(--border-soft);
+        }
+
+        .faq {
+            margin-top: 18px;
+        }
+
+        .faq-item {
+            border-top: 1px solid var(--border-soft);
+            padding: 18px 0;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .faq-item:hover {
+            background: #fafafa;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.02rem;
+            font-weight: 600;
+            padding-right: 8px;
+        }
+
+        .faq-toggle {
+            font-size: 1.4rem;
+            color: var(--magenta);
+            transition: transform 0.25s ease;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            font-size: 0.93rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            transition: max-height 0.35s ease, padding 0.35s ease;
+            padding-right: 40px;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 600px;
+            padding-top: 12px;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        /* KONTAKT */
+
+        #kontakt {
+            background: var(--violet);
+            color: #ffffff;
+        }
+
+        #kontakt h2.section-title {
+            color: #ffffff;
+        }
+
+        #kontakt .section-intro {
+            color: #e5e7eb;
+        }
+
+        #kontakt .underline {
+            background: #ffffff;
+        }
+
+        #kontakt p,
+        #kontakt strong {
+            color: #f9fafb;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+            gap: 32px;
+            margin-top: 26px;
+        }
+
+        .contact-card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 18px 18px 20px;
+            box-shadow: 0 18px 40px rgba(15,23,42,0.25);
+            color: #111827;
+        }
+
+        .contact-card h3 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        form {
+            display: grid;
+            gap: 12px;
+            font-size: 0.9rem;
+        }
+
+        label {
+            font-size: 0.86rem;
+            margin-bottom: 2px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            border-radius: var(--radius-pill);
+            border: 1px solid #e5e7eb;
+            padding: 9px 12px;
+            font: inherit;
+            background: #f9fafb;
+            color: #111827;
+        }
+
+        textarea {
+            border-radius: 12px;
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #9ca3af;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--magenta);
+            box-shadow: 0 0 0 1px rgba(230, 0, 126, 0.25);
+            background: #ffffff;
+        }
+
+        #kontakt .btn-primary {
+            border-color: var(--magenta);
+            background: var(--magenta);
+            color: #ffffff;
+            font-weight: 500;
+            box-shadow: 0 10px 24px rgba(230, 0, 126, 0.35);
+        }
+
+        #kontakt .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 12px 30px rgba(230, 0, 126, 0.45);
+        }
+
+        .contact-hint {
+            font-size: 0.8rem;
+            margin-top: 10px;
+            color: #e5e7eb;
+        }
+
+        .contact-details p {
+            margin-bottom: 6px;
+            font-size: 0.92rem;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #0b0612;
+            color: #e5e7eb;
+            font-size: 0.8rem;
+            text-align: center;
+            padding: 16px 0 22px;
+        }
+
+        footer a {
+            color: #e5e7eb;
+            text-decoration: underline;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 880px) {
+            .top-bar-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .main-nav {
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                gap: 16px;
+            }
+
+            #start.hero {
+                padding: 90px 0 100px;
+            }
+
+            .hero-inner {
+                padding: 0 18px;
+            }
+
+            main section {
+                padding: 52px 0;
+            }
+
+            .two-col,
+            .columns-3,
+            .contact-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .info-bar-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container,
+            .container-narrow {
+                padding: 0 16px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .main-nav {
+                gap: 12px;
+                font-size: 0.9rem;
+            }
+
+            .top-bar-whatsapp {
+                align-self: flex-start;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html, body {
+                scroll-behavior: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="top-bar">
+        <div class="top-bar-inner">
+            <div class="top-bar-text">
+                Diskreter Ankauf von Unternehmen in schwieriger Lage · vertraulich &amp; strukturiert
+            </div>
+            <!-- WhatsApp: Nummer anpassen (z.B. 491701234567) -->
+            <a href="https://wa.me/491234567890" class="top-bar-whatsapp" target="_blank" rel="noopener">
+                WhatsApp: Nachricht senden
+            </a>
+        </div>
+    </div>
+
+    <div class="nav-bar">
+        <div class="nav-inner">
+            <div class="logo-block">
+                <div class="logo-main">BUSCHMANN &amp; KOLLEGEN</div>
+                <div class="logo-sub">Unternehmensberatung für Unternehmen in schwieriger Lage</div>
+            </div>
+
+            <nav class="main-nav">
+                <a href="#start">Start</a>
+                <a href="#waswir">Was wir tun</a>
+                <a href="#ablauf">Ablauf</a>
+                <a href="#faq">FAQ</a>
+                <a href="#kontakt">Kontakt</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- HERO -->
+    <section id="start" class="hero">
+        <div class="hero-inner">
+            <div class="eyebrow">UNTERNEHMEN IN SCHWIERIGER LAGE</div>
+            <h1>In guten Händen – Unternehmen in schwieriger Lage verkaufen.</h1>
+            <p class="hero-text">
+                Als spezialisierte Unternehmensberatung begleiten wir Unternehmerinnen und Unternehmer, deren
+                Gesellschaft durch Verbindlichkeiten und wirtschaftliche Belastungen unter Druck geraten ist.
+                Unser Schwerpunkt liegt auf der strukturierten Übernahme von Unternehmen in schwierigen Situationen
+                und der Entwicklung tragfähiger Lösungen, bevor Situationen unkontrollierbar werden.
+            </p>
+            <p class="hero-text-muted">
+                Ziel ist eine ruhige, geordnete Lösung – mit klarer Kommunikation und rechtssicherer Umsetzung statt
+                spontaner Notmaßnahmen.
+            </p>
+            <ul class="hero-list">
+                <li>Übernahme von GmbH, UG und anderen Kapitalgesellschaften mit Verbindlichkeiten</li>
+                <li>Diskrete Analyse Ihrer Lage – ohne unnötige Unruhe bei Mitarbeitern oder Kunden</li>
+                <li>Strukturiertes Vorgehen statt unkoordinierter Insolvenz</li>
+            </ul>
+            <div class="hero-cta">
+                <a href="#kontakt" class="btn-primary">Unverbindliche Anfrage stellen</a>
+                <a href="#waswir" class="btn-ghost">Vorgehensweise ansehen</a>
+            </div>
+            <div class="hero-note">
+                Eine kurze Beschreibung Ihrer Situation genügt – wir melden uns in der Regel innerhalb eines Werktages.
+            </div>
+
+            <div class="hero-badges">
+                <span class="hero-badge">Diskret &amp; vertraulich</span>
+                <span class="hero-badge">Deutschlandweit tätig</span>
+                <span class="hero-badge">Fokus: Unternehmen mit Verbindlichkeiten</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFO-BAR -->
+    <section class="info-bar">
+        <div class="info-bar-inner">
+            <div class="info-bar-text">
+                <span>Kostenlose Ersteinschätzung für Geschäftsführer &amp; Gesellschafter.</span>
+                <span class="info-pill">Keine Weitergabe von Informationen ohne Ihr Einverständnis.</span>
+            </div>
+            <a href="#kontakt" class="btn-secondary-bar">Jetzt Situation schildern</a>
+        </div>
+    </section>
+
+    <!-- LEISTUNGEN -->
+    <section id="waswir">
+        <div class="container-narrow">
+            <h2 class="section-title">Was wir für Sie tun.</h2>
+            <p class="section-intro">
+                Buschmann &amp; Kollegen konzentriert sich auf Unternehmen, bei denen Verbindlichkeiten und laufende
+                Verpflichtungen zur Belastung geworden sind. Wir prüfen, ob ein Ankauf Ihres Unternehmens möglich
+                und sinnvoll ist – und begleiten alle Schritte bis zur Übertragung der Gesellschaftsanteile.
+            </p>
+            <div class="underline"></div>
+
+            <div class="two-col">
+                <div>
+                    <p>
+                        Der Schwerpunkt unserer Tätigkeit liegt auf der Übernahme von Kapitalgesellschaften, die
+                        durch Schulden, Haftungsrisiken und strukturelle Probleme gebunden sind. Statt pauschaler
+                        Versprechen erhalten Sie eine nüchterne Analyse Ihrer Ausgangslage sowie konkrete
+                        Handlungsoptionen.
+                    </p>
+                    <p>
+                        Auf Wunsch erfolgt die Abstimmung in enger Zusammenarbeit mit Ihren bestehenden Rechts- und
+                        Steuerberatern. So stellen wir sicher, dass wirtschaftliche, rechtliche und steuerliche Aspekte
+                        zusammenpassen.
+                    </p>
+                </div>
+                <div>
+                    <h3>Leistungsschwerpunkte:</h3>
+                    <ul>
+                        <li>Prüfung von Bilanzen, Schuldenstruktur und Verträgen</li>
+                        <li>Entwicklung von Szenarien: Verkauf, Restrukturierung, geordnete Beendigung</li>
+                        <li>Vorbereitung und Durchführung eines Anteilskaufs (Share Deal)</li>
+                        <li>Koordination mit Notar, Rechtsanwälten und Steuerberatern</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="hint-box">
+                Hinweis: Wir ersetzen keine individuelle Rechts- oder Steuerberatung. Bei Bedarf beziehen wir
+                spezialisierte Rechtsanwälte und Steuerberater in den Prozess ein – gern auch Ihre bestehenden Berater.
+            </div>
+        </div>
+    </section>
+
+    <!-- ABLAUF -->
+    <section id="ablauf">
+        <div class="container-narrow">
+            <h2 class="section-title">Wie der Verkauf abläuft.</h2>
+            <p class="section-intro">
+                Der Prozess ist klar strukturiert. Sie behalten jederzeit die Kontrolle und entscheiden,
+                in welchem Schritt Sie weitergehen möchten.
+            </p>
+            <div class="underline"></div>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h3>Unverbindliche Anfrage</h3>
+                        <p>
+                            Sie skizzieren Ihre Situation kurz per Formular oder E-Mail: Gesellschaftsform, Branche,
+                            grobe Schuldenhöhe und aktuelle Herausforderungen. Umfangreiche Unterlagen sind zunächst
+                            nicht erforderlich.
+                        </p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h3>Erstes Gespräch &amp; Prüfung</h3>
+                        <p>
+                            In einem vertraulichen Gespräch klären wir offene Fragen und sichten die wichtigsten
+                            Unterlagen. Sie erhalten eine ehrliche Einschätzung, ob ein Ankauf in Betracht kommt und
+                            welche Alternativen bestehen.
+                        </p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h3>Strukturierte Übernahme</h3>
+                        <p>
+                            Kommt ein Verkauf in Frage, werden Konditionen und Ablauf gemeinsam festgelegt.
+                            Die Übertragung der Geschäftsanteile erfolgt rechtssicher über einen Notar und – auf Wunsch –
+                            in enger Abstimmung mit Ihren Beratern.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WARUM WIR -->
+    <section id="warum">
+        <div class="container-narrow">
+            <h2 class="section-title">Warum Mandanten an Buschmann &amp; Kollegen verkaufen.</h2>
+            <p class="section-intro">
+                Viele Mandanten suchen eine ruhige, sachliche und diskrete Lösung – ohne laute Versprechen,
+                aber mit klarer Struktur und verlässlicher Begleitung.
+            </p>
+            <div class="underline"></div>
+
+            <div class="columns-3">
+                <div>
+                    <h3>Diskrete Behandlung</h3>
+                    <p>
+                        Ihre Anfrage wird vertraulich behandelt. Externe Stellen werden nur einbezogen,
+                        wenn Sie dem ausdrücklich zustimmen.
+                    </p>
+                </div>
+                <div>
+                    <h3>Praxis­erfahrung</h3>
+                    <p>
+                        Erfahrung aus Übernahmen und Restrukturierungen sorgt für realistische Einschätzungen
+                        und klare Handlungsvorschläge.
+                    </p>
+                </div>
+                <div>
+                    <h3>Klare Sprache</h3>
+                    <p>
+                        Chancen, Risiken und Grenzen werden offen angesprochen – auch dann, wenn ein Verkauf
+                        nicht der sinnvollste Weg ist.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="container-narrow">
+            <h2 class="section-title">Häufige Fragen.</h2>
+            <div class="underline"></div>
+
+            <div class="faq">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>An wen richtet sich unser Angebot?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Unser Angebot richtet sich an Unternehmerinnen und Unternehmer aus dem kleinen und
+                            mittelständischen Bereich, insbesondere an Geschäftsführer und Gesellschafter von
+                            Kapitalgesellschaften in Deutschland und Österreich – wie GmbH, GmbH &amp; Co. KG
+                            oder Aktiengesellschaften.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Wie unterstützen wir konkret?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Zu Beginn führen wir vertrauliche Erstgespräche, um Ihre Situation fachlich richtig
+                            einzuordnen. Anschließend wird Ihr Fall juristisch geprüft und es werden rechtssichere
+                            Lösungsmodelle entwickelt.
+                        </p>
+                        <p>
+                            Typische Bausteine sind etwa die Prüfung einer Insolvenzantragspflicht, Schutz von
+                            Vermögenswerten, geordnete Liquidation oder Übernahme, Gläubigermanagement sowie
+                            Treuhand- und Interimslösungen.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Lässt sich eine Insolvenz verhindern?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Ob eine Insolvenz verhindert werden kann, hängt von Schuldenstruktur, Liquidität,
+                            laufenden Verpflichtungen und zeitlichem Druck ab. Unsere kostenfreie Erstberatung gibt
+                            Ihnen einen realistischen Überblick über mögliche Wege und Alternativen.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Wie rechtssicher ist unsere Arbeit?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Buschmann &amp; Kollegen arbeitet ausschließlich im rechtlich zulässigen Rahmen. Wir legen
+                            Wert auf eine sorgfältige Analyse und binden auf Wunsch spezialisierte Fachanwälte und
+                            Steuerberater ein, um fundierte Entscheidungen zu treffen.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Bleibe ich persönlich haftbar?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Ob eine persönliche Haftung besteht, hängt von Ihrer individuellen Situation ab – etwa von
+                            Bürgschaften, privaten Sicherheiten oder möglichen Haftungsrisiken als Geschäftsführer.
+                            Diese Punkte werden sorgfältig geprüft und bei Bedarf mit spezialisierten Beratern bewertet.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Wie wird mit meiner Situation umgegangen (Diskretion)?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Diskretion ist zentraler Bestandteil unserer Arbeit. Ihre Anfrage und alle Unterlagen
+                            werden vertraulich behandelt. Auf Wunsch arbeiten wir mit vorgeschalteten Gesellschaften,
+                            sodass nach außen keine Rückschlüsse auf Buschmann &amp; Kollegen möglich sind.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Wie setzen sich die Kosten zusammen?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Die Kosten richten sich nach Umfang und Komplexität des Mandats. Vor Beginn der
+                            Zusammenarbeit erhalten Sie eine transparente Einschätzung – pauschale Festpreisversprechen
+                            werden aus Gründen der Seriosität vermieden.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section id="kontakt">
+        <div class="container-narrow">
+            <h2 class="section-title">Kontakt.</h2>
+            <p class="section-intro">
+                Eine kurze Beschreibung Ihrer Situation genügt. Wir melden uns mit einer ersten Einschätzung
+                und – sofern sinnvoll – mit einem Terminvorschlag für ein Gespräch.
+            </p>
+            <div class="underline"></div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>Ihre Nachricht an Buschmann &amp; Kollegen</h3>
+                    <!-- Formspree: ID xyzowzzy -->
+                    <form 
+                        action="https://formspree.io/f/xyzowzzy" 
+                        method="POST" 
+                        accept-charset="UTF-8"
+                    >
+                        <div>
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div>
+                            <label for="email">E-Mail *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div>
+                            <label for="phone">Telefon (optional)</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div>
+                            <label for="company">Unternehmen / Gesellschaft</label>
+                            <input type="text" id="company" name="company" placeholder="z.B. Muster GmbH, UG, Branche">
+                        </div>
+                        <div>
+                            <label for="message">Kurzbeschreibung Ihrer Situation *</label>
+                            <textarea id="message" name="message" required placeholder="z.B. Unternehmensform, grobe Höhe der Verbindlichkeiten, aktuelle Lage …"></textarea>
+                        </div>
+
+                        <input type="hidden" name="_subject" value="Neue Anfrage über die Website – Buschmann & Kollegen">
+
+                        <button type="submit" class="btn-primary">Anfrage senden</button>
+                    </form>
+                </div>
+
+                <div class="contact-details">
+                    <p>
+                        Gern können Sie sich auch direkt melden, wenn Sie lieber telefonisch sprechen möchten
+                        oder vorab nur wenige Fragen haben.
+                    </p>
+
+                    <strong>E-Mail</strong>
+                    <p>info@buschmann-und-kollegen.de</p>
+
+                    <strong>Telefon</strong>
+                    <p>+49 (0)123 456 7890</p>
+
+                    <strong>Ansprechpartner</strong>
+                    <p>Buschmann &amp; Kollegen Unternehmensberatung</p>
+
+                    <p class="contact-hint">
+                        Diese Informationen ersetzen keine rechtliche oder steuerliche Beratung.
+                        Auf Wunsch arbeiten wir mit Ihren bestehenden Beratern zusammen.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    &copy; <span id="year"></span> Buschmann &amp; Kollegen Unternehmensberatung – Ankauf von Unternehmen in schwieriger Lage.
+    | <a href="#">Impressum</a> · <a href="#">Datenschutz</a>
+</footer>
+
+<script>
+    // Jahr im Footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // FAQ-Accordion
+    document.querySelectorAll(".faq-item").forEach(item => {
+        item.addEventListener("click", () => {
+            document.querySelectorAll(".faq-item").forEach(i => {
+                if (i !== item) i.classList.remove("active");
+            });
+            item.classList.toggle("active");
+        });
+    });
+</script>
+</body>
+</html>
